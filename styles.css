@@ -1,0 +1,141 @@
+:root {
+    --color1-: #cfe3e3;
+    --color2-: #84af9c;
+    --color3-: #547164;
+    --color4-: #333735;
+}
+
+* {
+    box-sizing: border-box;
+    -webkit-user-select: none;
+    user-select: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--color1-);
+}
+
+#container {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* This is the side menu */
+
+header {
+    min-height: 729px;
+    border-right: 2px solid var(--color4-);
+    background-color: var(--color1-);
+    position: fixed;
+}
+
+header h2 {
+    color: var(--color4-);
+    padding: 1.2em 0.6em;
+    margin: 0;
+}
+
+.h2-el {
+    background-color: var(--color2-);
+}
+
+header a {
+    text-decoration: none;
+}
+
+/* The main section of the webpage */
+
+main {
+    margin-left: 30em;
+}
+
+main div {
+    max-width: 900px;
+    border-bottom: 1px solid var(--color4-);
+    margin-bottom: 2em;
+}
+
+main div:last-child {
+    border-bottom: none;
+}
+
+main div > h1 {
+    font-weight: lighter;
+    color: var(--color3-);
+}
+
+main div > p {
+    font-size: 1.2em;
+    color: var(--color4-);
+}
+
+main ul, ol {
+    font-size: 1.2em;
+    color: var(--color4-);
+}
+
+.section-2 li, .section-3 li, .section-7 li {
+    padding: 0.7em;
+}
+
+.section-8 img {
+    border-radius: 15px;
+    width: 400px;
+    object-fit: contain;
+}
+
+/* made the webpage responsive */
+
+@media only screen and (max-width: 900px) {
+    #container h1{
+        font-size: 1.4em;
+    }
+
+    #container h2 {
+        font-size: 1.2em;
+    }
+
+    main {
+        margin-left: 25em;
+        overflow: hidden;
+    }
+
+    main div {
+        width: 80%;
+    }
+
+    main div > p {
+        font-size: 1em;
+    }
+    
+    main ul, ol {
+        font-size: 1em;
+    }
+
+    .section-8 img {
+        width: 180px;
+    }
+
+  }
+
+  @media only screen and (max-width: 700px) {
+    header {
+        display: none;
+    }
+
+    main {
+        margin-left: 1em;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    main div {
+        width: 100%;
+    }
+
+  }
